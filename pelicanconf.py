@@ -84,5 +84,5 @@ IGNORE_FILES = [".ipynb_checkpoints"]
 DISQUS_SITENAME = "i-of-s"
 
 # Give the control on the css highlighter
-IPYNB_IGNORE_CSS=True
+IPYNB_SKIP_CSS=True
 
