@@ -287,7 +287,6 @@ pre {
     }
 
     .cover-img {
-        background-position: 0;
         background-size: cover;
     }
 
@@ -308,8 +307,4 @@ pre {
     }
 }
 
-@media (max-width: 480px) {
-    .cover-img {
-        background-position: 0;
-    }
 }
