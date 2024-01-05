@@ -89,7 +89,7 @@
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="My-background">My background<a class="anchor-link" href="#My-background">¶</a></h1><hr />
+<h1 id="My-background">My background<a class="anchor-link" href="#My-background">¶</a></h1><hr/>
 <p>Before proceeding let's approach the background that took me to the point of creating this blog. I started learning python trying to reproduce one really nice work [<a href="#cit-Deville2015">1</a>] by Sylvain Deville that used the Scopus database in order to study the evolution of the Ceramics field research. The use of <a href="https://en.wikipedia.org/wiki/Graph_theory">Graph Theory</a> was a really compelling (and visually beautiful) way to present the results. However the most shocking feature: <strong>Every tool used on the paper was completely free and open source</strong>. Beautiful plots, reproducible work, free tools and insightful conclusions, if this is not inspiring, <em>nothing is...</em></p>
 <p>After such experience and <strong> A LOT</strong> of visits to <a href="https://stackoverflow.com/questions/tagged/python">Stackoverflow</a> I discovered the <a href="http://jupyter.org/">Jupyter Notebook</a> platform. I am far from a coder and often  <em><del>always</del></em>  rely on two dumb extensive methods:</p>
 <ol>
@@ -98,7 +98,7 @@
 </ol>
 <p>In a ideal scenario, one would have time and learn to sketch a program after introduction to more lower level language such as C or FORTRAN. This would allow the person to better understand how a computer works while executing its code. However, with limited time resource (<em>and plenty of different possible ways to spend it</em>) such technique may suit a person starting to code.</p>
 <p>Another useful feature of Jupyter Notebook, is the possibility of writing text in between code cells. But not only plain texts, in Jupyter we can use Markdown a minimalist syntax that allows the construction of texts with tables, images and media in a really easy way. But the best feature must be the capability of writing mathematical equations and rendering directly on the notebook. This is useful for writing remarks and study notes. Here an example:</p>
-<hr />
+<hr/>
 </div>
 </div>
 </div>
@@ -164,8 +164,9 @@ V = (x^2+y^2) \ \hat{i} + (x^2-y^2) \ \hat{j}
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_svg output_subarea">
-
-
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
 <!-- Created with matplotlib (http://matplotlib.org/) -->
 <svg height="170pt" version="1.1" viewbox="0 0 325 170" width="325pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -4271,8 +4272,9 @@ L 314.304688 10.7
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_svg output_subarea">
-
-
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
 <!-- Created with matplotlib (http://matplotlib.org/) -->
 <svg height="170pt" version="1.1" viewbox="0 0 320 170" width="320pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -6701,7 +6703,7 @@ z
 \nabla \cdot V = \lim_{A \to 0}{\frac{1}{A} \oint_C V \cdot \hat{n} \ ds}
 \end{equation}<p>That is to say that the divergence is the limit of the flux density of a region enclosed by the curve $C$ when this regions shrinks to a point (zero area).</p>
 <p>We see that its quantity represents the idea of "outward flow" at a point and describes well the vector field $V$ where we can see the regions where the flux is outwards (negative divergence) and where the flux is inwards (positive divergence) a specific point.</p>
-<hr />
+<hr/>
 </div>
 </div>
 </div>
@@ -6716,7 +6718,7 @@ z
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Website">Website<a class="anchor-link" href="#Website">¶</a></h1><hr />
+<h1 id="Website">Website<a class="anchor-link" href="#Website">¶</a></h1><hr/>
 <p>The website was constructed following the awesome tutorial from <a href="https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/">Dataquest</a>. In order to avoid redundancy I will not go into the details but basically the whole idea can be summerized in:</p>
 <ol>
 <li>Creating your blog posts using a Jupyter Notebook (or Markdown for more simple text)</li>
@@ -6726,7 +6728,7 @@ z
 </ol>
 <p>Such tutorial will provides an insightful way to get used to using a version control system and a good introduction to the "html world".</p>
 <p>However, after that you will have only a default template like the following.</p>
-<p><img alt="Figure 1" src="http://fjavieralba.com/static/images/pelican_default.png" /></p>
+<p><img alt="Figure 1" src="http://fjavieralba.com/static/images/pelican_default.png"/></p>
 <p>Figure 1: <em>Example of a default Pelican page. Credits to <a href="http://fjavieralba.com/pelican-a-static-blog-generator-for-pythonistas.html">Javier Alba</a>.</em></p>
 <p>The process to add a theme is quite simple and you will only need to specify the directory of your downloaded theme on the <code>pelicanconf.py</code> file using the <code>THEME</code>  variable.</p>
 <p>In order to make a little bit easier to both locally test your website and to push the changes to your GitHub pages domain, we can use two batch files to avoid opening the terminal every time to write these commands. Basically we will have such functionalities at the tip of our mouses after creating such files on any text editor.</p>
@@ -6737,7 +6739,7 @@ z
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Workflow">Workflow<a class="anchor-link" href="#Workflow">¶</a></h1><hr />
+<h1 id="Workflow">Workflow<a class="anchor-link" href="#Workflow">¶</a></h1><hr/>
 <p>The currently setup is the following.</p>
 <p>I have a workbench directory just to be able to work on the Jupyter Notebook posts in a more direct way. Markdown pages and posts can be created directly in the repository folder.</p>
 <p>The batch files mentioned are the following:</p>
@@ -6766,7 +6768,7 @@ git push origin master
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Final-Remarks">Final Remarks<a class="anchor-link" href="#Final-Remarks">¶</a></h1><hr />
+<h1 id="Final-Remarks">Final Remarks<a class="anchor-link" href="#Final-Remarks">¶</a></h1><hr/>
 <p>This is just a primer on how this whole setup was organized. There are different details that were not mentioned due the existence of plenty useful resources.</p>
 <p>The requirements for such setup are:</p>
 <ul>
@@ -6788,7 +6790,7 @@ git push origin master
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="References">References<a class="anchor-link" href="#References">¶</a></h1><hr />
+<h1 id="References">References<a class="anchor-link" href="#References">¶</a></h1><hr/>
 <p>[<a href="#call-Deville2015" id="cit-Deville2015">1</a>] Deville Sylvain and Stevenson Adam J., ''<em>Mapping Ceramics Research and Its Evolution</em>'', Journal of the American Ceramic Society, vol. 9, number 8, pp. 1-9,  2015.  <a href="http://doi.wiley.com/10.1111/jace.13699">online</a></p>
 </div>
 </div>

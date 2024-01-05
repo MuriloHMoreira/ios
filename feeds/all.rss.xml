@@ -77,7 +77,7 @@ Thus the core ideas are extracted from their text, &lt;strong&gt;however my unde
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Series-overview"&gt;Series overview&lt;a class="anchor-link" href="#Series-overview"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="Series-overview"&gt;Series overview&lt;a class="anchor-link" href="#Series-overview"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;The present series of posts aims to gather some thoughts on the visualization of the Finite Element Method an approximation technique that started to become increasingly important after the 60's [&lt;a href="#cit-Thomee2001"&gt;1&lt;/a&gt;] and today is largely used for the solution of linear and nonlinear partial derivative equations. The increase of computational power and the development of different specialized softwares (such as &lt;a href="https://www.ansys.com/"&gt;Ansys&lt;/a&gt; and &lt;a href="https://academy.3ds.com/en/software/abaqus-student-edition"&gt;ABAQUS&lt;/a&gt;) coupled with CAD disseminated this technique by allowing users without a deep background on numerical methods to perform studies solving different pre-build models in numerous geometries and boundary conditions.&lt;/p&gt;
 &lt;p&gt;In this series we will try to propose &lt;strong&gt;&lt;em&gt;"new ways"&lt;/em&gt;&lt;/strong&gt; &lt;a href="#f1"&gt;&lt;sup id="a1"&gt;1&lt;/sup&gt;&lt;/a&gt; of introducing the mathematical concepts that forms the fundamental theory behind this widely known technique. A better understanding of such concepts might help students seeking to go one step further which will allow a better critical analysis of the outputs (on the post processing of results) and the ability to develop more sophisticated models without depending on existing models implemented by expensive softwares (which can still be automated by using a &lt;strong&gt;&lt;em&gt;free package&lt;/em&gt;&lt;/strong&gt; such as &lt;a href="https://fenicsproject.org/"&gt;FEniCS&lt;/a&gt; or &lt;a href="https://www.firedrakeproject.org/"&gt;Firedrake&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Herein, we expect to contribute on the already huge bibliography on such subject by providing more intuitive illustrations for the ideas behind this popular technique. For that, we separated the series on the following parts &lt;a href="#f2"&gt;&lt;sup id="a2"&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -96,7 +96,7 @@ Thus the core ideas are extracted from their text, &lt;strong&gt;however my unde
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Approximation-of-Vectors"&gt;Approximation of Vectors&lt;a class="anchor-link" href="#Approximation-of-Vectors"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="Approximation-of-Vectors"&gt;Approximation of Vectors&lt;a class="anchor-link" href="#Approximation-of-Vectors"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;We will first consider a 2D Euclidean vector as it is the simplest way to visualize sizes and angles between them by using a Cartesian plan. We will be using the common orthogonal basis ($\hat{i} = \left[\begin{smallmatrix}1 \\ 0\end{smallmatrix}\right] $ and $\hat{j} = \left[\begin{smallmatrix} 0 \\ 1\end{smallmatrix} \right]$). First consider the vector:&lt;/p&gt;
 \begin{equation}
 v =   \begin{bmatrix}
@@ -169,8 +169,9 @@ v =   \begin{bmatrix}
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="output_svg output_subarea"&gt;
-
-
+&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
 
 &lt;svg height="308.278125pt" version="1.1" viewbox="0 0 306.7625 308.278125" width="306.7625pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
 &lt;metadata&gt;
@@ -1492,7 +1493,7 @@ z
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Approximation-of-functions"&gt;Approximation of functions&lt;a class="anchor-link" href="#Approximation-of-functions"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="Approximation-of-functions"&gt;Approximation of functions&lt;a class="anchor-link" href="#Approximation-of-functions"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;We now consider the approximation of functions. Again, instead of finding the best approximation of a function using the Least Squares or Galerkin methods (we will define each one of them formally in the next part) we will just check that better approximations of a function follow the behavior that we require in both methods (the minimization of the error for the Least Squares and the orthogonality of the error and the basis functions for the Galerkin Method), that is, the behavior that we identified for our 2D Euclidean vectors.&lt;/p&gt;
 &lt;p&gt;Let's start by the Sine function. I am far from an enthusiast of periodic functions but we can't ignore the importance of it, a transcendental function that keeps appearing just like Euler and his exponential function in different branches of math. For that we remember that sines, cosines and the exponential function can all be defined as infinite series. For the Sine it follows:&lt;/p&gt;
 \begin{equation}
@@ -1534,8 +1535,9 @@ z
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="output_svg output_subarea"&gt;
-
-
+&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
 
 &lt;svg height="300.989344pt" version="1.1" viewbox="0 0 393.262187 300.989344" width="393.262187pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
 &lt;metadata&gt;
@@ -3358,8 +3360,9 @@ Inner product of e and f(x) = 2.035938E-11
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="output_svg output_subarea"&gt;
-
-
+&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
 
 &lt;svg height="314.251825pt" version="1.1" viewbox="0 0 415.724687 314.251825" width="415.724687pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
 &lt;metadata&gt;
@@ -4464,7 +4467,7 @@ L 408.524688 10.2617
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Vector-Spaces-and-Function-Spaces"&gt;Vector Spaces and Function Spaces&lt;a class="anchor-link" href="#Vector-Spaces-and-Function-Spaces"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="Vector-Spaces-and-Function-Spaces"&gt;Vector Spaces and Function Spaces&lt;a class="anchor-link" href="#Vector-Spaces-and-Function-Spaces"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;Before reaching the definition of a space we will just formally define what a vector is. This will be enough for us to understand the similarity on the behavior of such objects. A vector is a mathematical object that can be &lt;strong&gt;added&lt;/strong&gt; with other vector, or &lt;strong&gt;scaled&lt;/strong&gt; by a &lt;em&gt;scalar&lt;/em&gt;. This is straightforward for both the 2D vectors and for functions. Let's explore some examples, if we consider the 2D vector $\boldsymbol{u}_{optimum}$ it is just a scaled version of our basis vector $\boldsymbol{\psi}$. Notice also that a scaled vector is just a representation of a numerous sum of vector, in the case we would sum $\boldsymbol{\psi}$ with itself 4 times. Such important operations (sum and multiplication) are also related on the concept of numbers (probably multiplication was introduced to you like so, $2 \cdot 3 = 2 + 2 + 2$). Notice one interesting feature, the defining property of a vector is not directly related to geometry, direction, magnitude or whatsoever, but rather how it can be susceptible to very specific operations (scaling and addition, which are closely related as we saw!)&lt;a href="#f6"&gt;&lt;sup id="a6"&gt;6&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Now that we intimately know the object in question, vectors (&lt;del&gt;and functions&lt;/del&gt;), we  will focus on the Vector and Function spaces. Let's start from one of the most fundamental objects of math, sets! Sets are important mathematical objects as they group other objects forming a collection of similar (&lt;strong&gt;or not&lt;/strong&gt;) objects (start imagining how powerful such definition really is! We can create sets of sets and consequently form subsets contained within bigger ones).&lt;/p&gt;
 &lt;p&gt;The concept of a set is important because a space is just a set that has a &lt;em&gt;structure&lt;/em&gt;, that is, some additional mathematical objects that add a sense to relations of individuals of the collection within a set. One example are operations which are mappings that associates an element of the set to every pair of its elements. For example, the sum operation on the naturals associates each element, 2 for instance, pairwise with every other elements (including 2, itself!), on the case, 2 and 0, 2 and 1, 2 and 2 and so on (some texts do not consider 0 as a Natural number, but here it is just a small example).&lt;/p&gt;
@@ -4520,7 +4523,7 @@ L 408.524688 10.2617
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Final-Remarks"&gt;Final Remarks&lt;a class="anchor-link" href="#Final-Remarks"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="Final-Remarks"&gt;Final Remarks&lt;a class="anchor-link" href="#Final-Remarks"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;The present series of blog posts aims to propose ways of visualizing the fundamental concepts of FEM. We start by showing examples of approximations of both 2D Euclidean vectors and single variable functions. We found out that better approximations have two important features: the measure of the error is smaller and the error and the vector space becomes "more orthogonal" as  the approximation gets better. These concepts were easier to visualize on the Euclidean vectors examples, however they remain true for functions, this happens because functions are vectors themselves. Finally,  we formalized the definitions of a vector and a function space, these structures will be helpful as the next part of this series will use such concepts to explain the orthogonality requirement and finally will lay the basis for the formalization of the methodologies to find the best approximation.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4528,7 +4531,7 @@ L 408.524688 10.2617
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;hr /&gt;
+&lt;hr/&gt;
 &lt;p&gt;&lt;b id="f1"&gt;1&lt;/b&gt; I found it presumptuous to say that I have such new content to share. It is far more fair to say that I am just willing to present this concepts in a more concise way since I had a hard time to find the intuitions from numerous different sources. &lt;a href="#a1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;b id="f2"&gt;2&lt;/b&gt; The full list of the parts will be updated accordingly. This will allow the series to continue as far my time and imagination &lt;del&gt;and sources to copy&lt;/del&gt; permit me. &lt;a href="#a2"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;b id="f3"&gt;3&lt;/b&gt; Bear with me here, we already have the graph of a function, and two vectors on the same line! The figure would be too cluttered and definitely not elegant at all. &lt;a href="#a3"&gt;↩&lt;/a&gt;&lt;/p&gt;
@@ -4547,7 +4550,7 @@ L 408.524688 10.2617
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="References"&gt;References&lt;a class="anchor-link" href="#References"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="References"&gt;References&lt;a class="anchor-link" href="#References"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;[&lt;a href="#call-Thomee2001" id="cit-Thomee2001"&gt;1&lt;/a&gt;] Thomee Vidar, "&lt;em&gt;From finite differences to finite elements - A short history of numerical analysis of partial differential equations&lt;/em&gt;'', vol. 128, number , pp. 1--54,  2001.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4599,7 +4602,7 @@ L 408.524688 10.2617
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="My-background"&gt;My background&lt;a class="anchor-link" href="#My-background"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="My-background"&gt;My background&lt;a class="anchor-link" href="#My-background"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;Before proceeding let's approach the background that took me to the point of creating this blog. I started learning python trying to reproduce one really nice work [&lt;a href="#cit-Deville2015"&gt;1&lt;/a&gt;] by Sylvain Deville that used the Scopus database in order to study the evolution of the Ceramics field research. The use of &lt;a href="https://en.wikipedia.org/wiki/Graph_theory"&gt;Graph Theory&lt;/a&gt; was a really compelling (and visually beautiful) way to present the results. However the most shocking feature: &lt;strong&gt;Every tool used on the paper was completely free and open source&lt;/strong&gt;. Beautiful plots, reproducible work, free tools and insightful conclusions, if this is not inspiring, &lt;em&gt;nothing is...&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;After such experience and &lt;strong&gt; A LOT&lt;/strong&gt; of visits to &lt;a href="https://stackoverflow.com/questions/tagged/python"&gt;Stackoverflow&lt;/a&gt; I discovered the &lt;a href="http://jupyter.org/"&gt;Jupyter Notebook&lt;/a&gt; platform. I am far from a coder and often  &lt;em&gt;&lt;del&gt;always&lt;/del&gt;&lt;/em&gt;  rely on two dumb extensive methods:&lt;/p&gt;
 &lt;ol&gt;
@@ -4608,7 +4611,7 @@ L 408.524688 10.2617
 &lt;/ol&gt;
 &lt;p&gt;In a ideal scenario, one would have time and learn to sketch a program after introduction to more lower level language such as C or FORTRAN. This would allow the person to better understand how a computer works while executing its code. However, with limited time resource (&lt;em&gt;and plenty of different possible ways to spend it&lt;/em&gt;) such technique may suit a person starting to code.&lt;/p&gt;
 &lt;p&gt;Another useful feature of Jupyter Notebook, is the possibility of writing text in between code cells. But not only plain texts, in Jupyter we can use Markdown a minimalist syntax that allows the construction of texts with tables, images and media in a really easy way. But the best feature must be the capability of writing mathematical equations and rendering directly on the notebook. This is useful for writing remarks and study notes. Here an example:&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr/&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4674,8 +4677,9 @@ V = (x^2+y^2) \ \hat{i} + (x^2-y^2) \ \hat{j}
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="output_svg output_subarea"&gt;
-
-
+&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
 
 &lt;!-- Created with matplotlib (http://matplotlib.org/) --&gt;
 &lt;svg height="170pt" version="1.1" viewbox="0 0 325 170" width="325pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
@@ -8781,8 +8785,9 @@ L 314.304688 10.7
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="output_svg output_subarea"&gt;
-
-
+&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
 
 &lt;!-- Created with matplotlib (http://matplotlib.org/) --&gt;
 &lt;svg height="170pt" version="1.1" viewbox="0 0 320 170" width="320pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
@@ -11211,7 +11216,7 @@ z
 \nabla \cdot V = \lim_{A \to 0}{\frac{1}{A} \oint_C V \cdot \hat{n} \ ds}
 \end{equation}&lt;p&gt;That is to say that the divergence is the limit of the flux density of a region enclosed by the curve $C$ when this regions shrinks to a point (zero area).&lt;/p&gt;
 &lt;p&gt;We see that its quantity represents the idea of "outward flow" at a point and describes well the vector field $V$ where we can see the regions where the flux is outwards (negative divergence) and where the flux is inwards (positive divergence) a specific point.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr/&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -11226,7 +11231,7 @@ z
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Website"&gt;Website&lt;a class="anchor-link" href="#Website"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="Website"&gt;Website&lt;a class="anchor-link" href="#Website"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;The website was constructed following the awesome tutorial from &lt;a href="https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/"&gt;Dataquest&lt;/a&gt;. In order to avoid redundancy I will not go into the details but basically the whole idea can be summerized in:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Creating your blog posts using a Jupyter Notebook (or Markdown for more simple text)&lt;/li&gt;
@@ -11236,7 +11241,7 @@ z
 &lt;/ol&gt;
 &lt;p&gt;Such tutorial will provides an insightful way to get used to using a version control system and a good introduction to the "html world".&lt;/p&gt;
 &lt;p&gt;However, after that you will have only a default template like the following.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Figure 1" src="http://fjavieralba.com/static/images/pelican_default.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Figure 1" src="http://fjavieralba.com/static/images/pelican_default.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Figure 1: &lt;em&gt;Example of a default Pelican page. Credits to &lt;a href="http://fjavieralba.com/pelican-a-static-blog-generator-for-pythonistas.html"&gt;Javier Alba&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The process to add a theme is quite simple and you will only need to specify the directory of your downloaded theme on the &lt;code&gt;pelicanconf.py&lt;/code&gt; file using the &lt;code&gt;THEME&lt;/code&gt;  variable.&lt;/p&gt;
 &lt;p&gt;In order to make a little bit easier to both locally test your website and to push the changes to your GitHub pages domain, we can use two batch files to avoid opening the terminal every time to write these commands. Basically we will have such functionalities at the tip of our mouses after creating such files on any text editor.&lt;/p&gt;
@@ -11247,7 +11252,7 @@ z
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Workflow"&gt;Workflow&lt;a class="anchor-link" href="#Workflow"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="Workflow"&gt;Workflow&lt;a class="anchor-link" href="#Workflow"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;The currently setup is the following.&lt;/p&gt;
 &lt;p&gt;I have a workbench directory just to be able to work on the Jupyter Notebook posts in a more direct way. Markdown pages and posts can be created directly in the repository folder.&lt;/p&gt;
 &lt;p&gt;The batch files mentioned are the following:&lt;/p&gt;
@@ -11276,7 +11281,7 @@ git push origin master
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Final-Remarks"&gt;Final Remarks&lt;a class="anchor-link" href="#Final-Remarks"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="Final-Remarks"&gt;Final Remarks&lt;a class="anchor-link" href="#Final-Remarks"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;This is just a primer on how this whole setup was organized. There are different details that were not mentioned due the existence of plenty useful resources.&lt;/p&gt;
 &lt;p&gt;The requirements for such setup are:&lt;/p&gt;
 &lt;ul&gt;
@@ -11298,7 +11303,7 @@ git push origin master
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="References"&gt;References&lt;a class="anchor-link" href="#References"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr /&gt;
+&lt;h1 id="References"&gt;References&lt;a class="anchor-link" href="#References"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;hr/&gt;
 &lt;p&gt;[&lt;a href="#call-Deville2015" id="cit-Deville2015"&gt;1&lt;/a&gt;] Deville Sylvain and Stevenson Adam J., ''&lt;em&gt;Mapping Ceramics Research and Its Evolution&lt;/em&gt;'', Journal of the American Ceramic Society, vol. 9, number 8, pp. 1-9,  2015.  &lt;a href="http://doi.wiley.com/10.1111/jace.13699"&gt;online&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
