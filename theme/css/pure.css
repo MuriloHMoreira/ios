@@ -114,8 +114,7 @@ pre {
 .brand-main a {
     text-transform: uppercase;
     text-decoration: none;
-    margin-left: 15px;
-    font-size: 25px;
+    font-size: 30px;
     color: #fff;
     border-bottom: 1px solid rgba(255,255,255,0.3);
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -125,8 +124,7 @@ pre {
 .tagline {
     margin-top: -15px;
     line-height: 15px;
-    margin-left: 15px;
-    font-size: 80%;
+    font-size: 100%;
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     color: #fff;
 }
@@ -143,12 +141,15 @@ pre {
 
 .links a {
     font-size: 15px;
-    padding-left: 15px;
     font-family: sans-serif;
     letter-spacing: 2px;
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     text-decoration: none;
     color: #fff;
+}
+
+.coverlinks {
+    font-size: 16px!important;
 }
 
 .content-subhead {
@@ -291,7 +292,6 @@ pre {
     }
 
     .cover-body {
-        padding-bottom: 5%;
         padding-top: 0;
     }
 
