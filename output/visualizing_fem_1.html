@@ -91,7 +91,7 @@ Thus the core ideas are extracted from their text, <strong>however my understand
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Series-overview">Series overview<a class="anchor-link" href="#Series-overview">¶</a></h1><hr />
+<h1 id="Series-overview">Series overview<a class="anchor-link" href="#Series-overview">¶</a></h1><hr/>
 <p>The present series of posts aims to gather some thoughts on the visualization of the Finite Element Method an approximation technique that started to become increasingly important after the 60's [<a href="#cit-Thomee2001">1</a>] and today is largely used for the solution of linear and nonlinear partial derivative equations. The increase of computational power and the development of different specialized softwares (such as <a href="https://www.ansys.com/">Ansys</a> and <a href="https://academy.3ds.com/en/software/abaqus-student-edition">ABAQUS</a>) coupled with CAD disseminated this technique by allowing users without a deep background on numerical methods to perform studies solving different pre-build models in numerous geometries and boundary conditions.</p>
 <p>In this series we will try to propose <strong><em>"new ways"</em></strong> <a href="#f1"><sup id="a1">1</sup></a> of introducing the mathematical concepts that forms the fundamental theory behind this widely known technique. A better understanding of such concepts might help students seeking to go one step further which will allow a better critical analysis of the outputs (on the post processing of results) and the ability to develop more sophisticated models without depending on existing models implemented by expensive softwares (which can still be automated by using a <strong><em>free package</em></strong> such as <a href="https://fenicsproject.org/">FEniCS</a> or <a href="https://www.firedrakeproject.org/">Firedrake</a>).</p>
 <p>Herein, we expect to contribute on the already huge bibliography on such subject by providing more intuitive illustrations for the ideas behind this popular technique. For that, we separated the series on the following parts <a href="#f2"><sup id="a2">2</sup></a>.</p>
@@ -110,7 +110,7 @@ Thus the core ideas are extracted from their text, <strong>however my understand
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Approximation-of-Vectors">Approximation of Vectors<a class="anchor-link" href="#Approximation-of-Vectors">¶</a></h1><hr />
+<h1 id="Approximation-of-Vectors">Approximation of Vectors<a class="anchor-link" href="#Approximation-of-Vectors">¶</a></h1><hr/>
 <p>We will first consider a 2D Euclidean vector as it is the simplest way to visualize sizes and angles between them by using a Cartesian plan. We will be using the common orthogonal basis ($\hat{i} = \left[\begin{smallmatrix}1 \\ 0\end{smallmatrix}\right] $ and $\hat{j} = \left[\begin{smallmatrix} 0 \\ 1\end{smallmatrix} \right]$). First consider the vector:</p>
 \begin{equation}
 v =   \begin{bmatrix}
@@ -183,8 +183,9 @@ v =   \begin{bmatrix}
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_svg output_subarea">
-
-
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
 <svg height="308.278125pt" version="1.1" viewbox="0 0 306.7625 308.278125" width="306.7625pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <metadata>
@@ -1506,7 +1507,7 @@ z
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Approximation-of-functions">Approximation of functions<a class="anchor-link" href="#Approximation-of-functions">¶</a></h1><hr />
+<h1 id="Approximation-of-functions">Approximation of functions<a class="anchor-link" href="#Approximation-of-functions">¶</a></h1><hr/>
 <p>We now consider the approximation of functions. Again, instead of finding the best approximation of a function using the Least Squares or Galerkin methods (we will define each one of them formally in the next part) we will just check that better approximations of a function follow the behavior that we require in both methods (the minimization of the error for the Least Squares and the orthogonality of the error and the basis functions for the Galerkin Method), that is, the behavior that we identified for our 2D Euclidean vectors.</p>
 <p>Let's start by the Sine function. I am far from an enthusiast of periodic functions but we can't ignore the importance of it, a transcendental function that keeps appearing just like Euler and his exponential function in different branches of math. For that we remember that sines, cosines and the exponential function can all be defined as infinite series. For the Sine it follows:</p>
 \begin{equation}
@@ -1548,8 +1549,9 @@ z
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_svg output_subarea">
-
-
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
 <svg height="300.989344pt" version="1.1" viewbox="0 0 393.262187 300.989344" width="393.262187pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <metadata>
@@ -3372,8 +3374,9 @@ Inner product of e and f(x) = 2.035938E-11
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_svg output_subarea">
-
-
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
 <svg height="314.251825pt" version="1.1" viewbox="0 0 415.724687 314.251825" width="415.724687pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <metadata>
@@ -4478,7 +4481,7 @@ L 408.524688 10.2617
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Vector-Spaces-and-Function-Spaces">Vector Spaces and Function Spaces<a class="anchor-link" href="#Vector-Spaces-and-Function-Spaces">¶</a></h1><hr />
+<h1 id="Vector-Spaces-and-Function-Spaces">Vector Spaces and Function Spaces<a class="anchor-link" href="#Vector-Spaces-and-Function-Spaces">¶</a></h1><hr/>
 <p>Before reaching the definition of a space we will just formally define what a vector is. This will be enough for us to understand the similarity on the behavior of such objects. A vector is a mathematical object that can be <strong>added</strong> with other vector, or <strong>scaled</strong> by a <em>scalar</em>. This is straightforward for both the 2D vectors and for functions. Let's explore some examples, if we consider the 2D vector $\boldsymbol{u}_{optimum}$ it is just a scaled version of our basis vector $\boldsymbol{\psi}$. Notice also that a scaled vector is just a representation of a numerous sum of vector, in the case we would sum $\boldsymbol{\psi}$ with itself 4 times. Such important operations (sum and multiplication) are also related on the concept of numbers (probably multiplication was introduced to you like so, $2 \cdot 3 = 2 + 2 + 2$). Notice one interesting feature, the defining property of a vector is not directly related to geometry, direction, magnitude or whatsoever, but rather how it can be susceptible to very specific operations (scaling and addition, which are closely related as we saw!)<a href="#f6"><sup id="a6">6</sup></a>.</p>
 <p>Now that we intimately know the object in question, vectors (<del>and functions</del>), we  will focus on the Vector and Function spaces. Let's start from one of the most fundamental objects of math, sets! Sets are important mathematical objects as they group other objects forming a collection of similar (<strong>or not</strong>) objects (start imagining how powerful such definition really is! We can create sets of sets and consequently form subsets contained within bigger ones).</p>
 <p>The concept of a set is important because a space is just a set that has a <em>structure</em>, that is, some additional mathematical objects that add a sense to relations of individuals of the collection within a set. One example are operations which are mappings that associates an element of the set to every pair of its elements. For example, the sum operation on the naturals associates each element, 2 for instance, pairwise with every other elements (including 2, itself!), on the case, 2 and 0, 2 and 1, 2 and 2 and so on (some texts do not consider 0 as a Natural number, but here it is just a small example).</p>
@@ -4534,7 +4537,7 @@ L 408.524688 10.2617
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Final-Remarks">Final Remarks<a class="anchor-link" href="#Final-Remarks">¶</a></h1><hr />
+<h1 id="Final-Remarks">Final Remarks<a class="anchor-link" href="#Final-Remarks">¶</a></h1><hr/>
 <p>The present series of blog posts aims to propose ways of visualizing the fundamental concepts of FEM. We start by showing examples of approximations of both 2D Euclidean vectors and single variable functions. We found out that better approximations have two important features: the measure of the error is smaller and the error and the vector space becomes "more orthogonal" as  the approximation gets better. These concepts were easier to visualize on the Euclidean vectors examples, however they remain true for functions, this happens because functions are vectors themselves. Finally,  we formalized the definitions of a vector and a function space, these structures will be helpful as the next part of this series will use such concepts to explain the orthogonality requirement and finally will lay the basis for the formalization of the methodologies to find the best approximation.</p>
 </div>
 </div>
@@ -4542,7 +4545,7 @@ L 408.524688 10.2617
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr />
+<hr/>
 <p><b id="f1">1</b> I found it presumptuous to say that I have such new content to share. It is far more fair to say that I am just willing to present this concepts in a more concise way since I had a hard time to find the intuitions from numerous different sources. <a href="#a1">↩</a></p>
 <p><b id="f2">2</b> The full list of the parts will be updated accordingly. This will allow the series to continue as far my time and imagination <del>and sources to copy</del> permit me. <a href="#a2">↩</a></p>
 <p><b id="f3">3</b> Bear with me here, we already have the graph of a function, and two vectors on the same line! The figure would be too cluttered and definitely not elegant at all. <a href="#a3">↩</a></p>
@@ -4561,7 +4564,7 @@ L 408.524688 10.2617
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="References">References<a class="anchor-link" href="#References">¶</a></h1><hr />
+<h1 id="References">References<a class="anchor-link" href="#References">¶</a></h1><hr/>
 <p>[<a href="#call-Thomee2001" id="cit-Thomee2001">1</a>] Thomee Vidar, "<em>From finite differences to finite elements - A short history of numerical analysis of partial differential equations</em>'', vol. 128, number , pp. 1--54,  2001.</p>
 </div>
 </div>
